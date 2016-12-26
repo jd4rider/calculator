@@ -705,12 +705,19 @@ public class Calculator extends JFrame {
 		
 			
 		setFocusable(true);
+		InitiateJavascript();
 	}
 	
 	public void CalculatorFocusable()
 	{
 		requestFocus(true);
 		setFocusable(true);
+	}
+	
+	public void InitiateJavascript(){
+		javaScriptEvalEquals("1*2");
+		//System.out.println("test");
+		
 	}
 	
 	public void getAndSetText(JButton a)
@@ -720,6 +727,7 @@ public class Calculator extends JFrame {
 		takeIn = jTextField2.getText() + a.getText();
 		jTextField2.setText(takeIn);
 		a.setFocusable(false);
+		
 		CalculatorFocusable();	
 	}
 	
